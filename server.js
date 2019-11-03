@@ -2,6 +2,11 @@ const express = require('express')
 const app = express()
 const routes = require('./routes');
 const port = process.env.PORT || 3000;
+const swaggerUi = require('swagger-ui-express');
+const YAML = require('yamljs');
+const swaggerDocument = YAML.load('./swagger.yaml');
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use(express.json())
 
