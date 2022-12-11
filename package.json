@@ -9,7 +9,7 @@
     "dev": "NODE_ENV=test PORT=3005 nodemon server.js"
   },
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "swagger-ui-express": "^4.1.2",
     "yamljs": "^0.3.0"
   },
